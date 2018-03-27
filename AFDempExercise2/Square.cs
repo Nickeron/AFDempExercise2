@@ -15,7 +15,7 @@ namespace AFDempExercise2
         public Square(int side)
         {
             Side = side;
-            ShapeColor = (Color)aRandomColor.Next(Enum.GetNames(typeof(Color)).Length);
+            ShapeColor = (Color) aRandomColor.Next(Enum.GetNames(typeof(Color)).Length);
             GetArea();
         }
 
@@ -28,7 +28,7 @@ namespace AFDempExercise2
 
         public override void GetArea()
         {
-            Area = (int)Math.Pow(Side, 2);
+            Area = (int) Math.Pow(Side, 2);
         }
 
         public override string GetInfo()

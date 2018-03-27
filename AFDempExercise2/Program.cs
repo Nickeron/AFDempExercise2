@@ -20,12 +20,18 @@ namespace AFDempExercise2
             Rectangle rectangle5 = new Rectangle(10, 5);
 
             Console.WriteLine("Hi user! We have 5 Rectangles and 5 Squares.");
+            Console.ReadKey();
 
-            Console.WriteLine("\nNow, the 2nd square is supposed to be equal to the 5t.");
+            Console.WriteLine("\nNow, the 2nd square is supposed to be equal to the 5th.");
             Console.WriteLine($"And that's {square2.Equals(square5)}.");
+            Console.ReadKey();
 
             Console.WriteLine("\nAlso, the 3rd rectangle is supposed to be equal to the 4th square.");
             Console.WriteLine($"And that's {rectangle3.Equals(square4)}.");
+            Console.ReadKey();
+
+            Console.WriteLine("\nNext, we make 2 lists filled with the above squares and rectangles");
+            Console.ReadKey();
 
             List<Square> squareList = new List<Square>
             {
@@ -45,40 +51,37 @@ namespace AFDempExercise2
                 rectangle5
             };
 
-            Console.WriteLine("\nNow, we have 2 lists filled with the above squares and rectangles");
-
             Console.WriteLine("\nThe square list contains:");
-
-            foreach (Square square in squareList)
-            {
-                Console.WriteLine(square);
-            }
+            PrintList(squareList);
+            Console.ReadKey();
 
             Console.WriteLine("\nThe rectangle list contains:");
+            PrintList(rectangleList);
+            Console.ReadKey();
 
-            foreach (Rectangle rectangle in rectangleList)
-            {
-                Console.WriteLine(rectangle);
-            }
-
-            Console.WriteLine("\nNow, we sort them! And so now..");
+            Console.WriteLine("\nNow, we sort them! And so..");
 
             squareList.Sort();
             rectangleList.Sort();
 
-            foreach (Square square in squareList)
-            {
-                Console.WriteLine(square);
-            }
+            Console.WriteLine("\nThe square list contains:");
+            PrintList(squareList);
+            Console.ReadKey();
 
             Console.WriteLine("\nThe rectangle list contains:");
-
-            foreach (Rectangle rectangle in rectangleList)
-            {
-                Console.WriteLine(rectangle);
-            }
-
+            PrintList(rectangleList);
             Console.ReadKey();
+
+            Console.Write("\nPress any key to exit:");
+            Console.ReadKey();
+        }
+
+        public static void PrintList<T>(List<T> list)
+        {
+            foreach (T item in list)
+            {
+                Console.WriteLine('\t' + item.ToString());
+            }
         }
     }
 }
