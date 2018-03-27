@@ -12,20 +12,6 @@ namespace AFDempExercise2
             aRandomColor = new Random();
         }
 
-        public enum Color
-        {
-            red,
-            blue,
-            white,
-            black,
-            yellow,
-            green,
-            purple,
-            orange,
-            brown,
-            pink
-        }
-
         public abstract string GetInfo();
 
         public override string ToString()
